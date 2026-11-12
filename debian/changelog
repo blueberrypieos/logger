@@ -1,3 +1,9 @@
+logger (2) blueberry-pie-os; urgency=medium
+
+  * logger has Priority important.
+
+ -- Maxwell <maxwell@blueberrypieos.com>  Thu, 12 Nov 2026 22:32:35 +0000
+
 logger (1) blueberry-pie-os; urgency=medium
 
   * logger 1
