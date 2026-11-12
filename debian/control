@@ -1,0 +1,16 @@
+Source: logger
+Section: utils
+Priority: optional
+Maintainer: Maxwell <maxwell@blueberrypieos.com>
+Build-Depends: pietoolchain (>= 0.1.0)
+Standards-Version: 4.7.3
+Homepage: https://github.com/blueberrypieos/logger
+Vcs-Git: https://github.com/blueberrypieos/logger.git
+Vcs-Browser: https://github.com/blueberrypieos/logger
+Rules-Requires-Root: no
+
+Package: logger
+Architecture: darwin-arm64
+Depends: libsystem
+Description: make entries in the system log
+ logger from FreeBSD, installed as /usr/bin/logger.

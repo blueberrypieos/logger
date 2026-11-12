@@ -1,0 +1,8 @@
+logger (1) blueberry-pie-os; urgency=medium
+
+  * logger 1
+  * freebsd/ holds logger.c and logger.1 from FreeBSD's release/12.4.0
+    tag, commit f2877ac4fb03265070b1cf97a07eb0e265bcaff9.
+  * logger.c's openlog names LOG_USER, so a bare level logs as user.
+
+ -- Maxwell <maxwell@blueberrypieos.com>  Wed, 11 Nov 2026 23:00:40 +0000

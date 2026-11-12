@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+# SPDX-License-Identifier: BSD-2-Clause
+# Copyright (c) 2026 The Blueberry Pie OS Authors
+
+include /usr/share/pietoolchain/rules.mk
+
+$(OBJ)/logger.o: $(SRCROOT)/freebsd/logger.c
+	@mkdir -p $(OBJ)
+	$(CC) $(BASE_CFLAGS) -DINET6 -c $< -o $@
+
+$(OBJ)/logger: $(OBJ)/logger.o
+	$(CC) $(BASE_LDFLAGS) $< -o $@
+
+install: $(OBJ)/logger
+	install -d $(ROOT)/usr/bin $(ROOT)/usr/share/man/man1
+	install -m 755 $(OBJ)/logger $(ROOT)/usr/bin/logger
+	install -m 644 $(SRCROOT)/freebsd/logger.1 $(ROOT)/usr/share/man/man1/logger.1
+
+.PHONY: install
